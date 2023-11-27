@@ -1,0 +1,125 @@
+
+###
+
+http://localhost:8080/dataaccess
+
+
+# Couleur #################################################################
+
+###
+GET http://localhost:8080/couleur
+
+###
+POST  http://localhost:8080/couleur
+content-type: application/json
+
+{
+    "nom": "test13",
+    "hexadecimal_rvb": "#000000"
+}
+
+###
+PUT  http://localhost:8080/couleur
+content-type: application/json
+
+{
+    "id": 1,
+    "nom": "Gris",
+    "hexadecimal_rvb": "#FFFFFF"
+}
+
+###
+DELETE  http://localhost:8080/couleur
+content-type: application/json
+
+{
+    "id": 49
+}
+
+###
+GET http://localhost:8080/couleur?id=3
+
+###
+GET http://localhost:8080/couleur?name=Blanc
+
+# Aliment #################################################################
+###
+GET http://localhost:8080/aliment
+content-type: application/json
+
+###
+POST http://localhost:8080/aliment
+content-type: application/json
+
+{
+    "nom": "Litchi pas beau",
+    "poids_moyen": 0.02,
+    "calories": 66,
+    "vitamines_C": 0.0,
+    "type_id": 1,
+    "couleur_id": 6
+  }
+
+###
+PUT http://localhost:8080/aliment
+content-type: application/json
+
+{
+    "id": 1,
+    "nom": "Bigaradier",
+    "poids_moyen": 0.1,
+    "calories": 66,
+    "vitamines_C": 50.5,
+    "type_id": 1,
+    "couleur_id": 6
+  }
+
+###
+DELETE http://localhost:8080/aliment
+content-type: application/json
+
+{
+    "id": 128
+}
+
+###
+GET http://localhost:8080/aliment?id=3
+
+###
+GET http://localhost:8080/aliment?name=Orange
+
+# Type Aliment ############################################################
+###
+GET http://localhost:8080/typealiment
+content-type: application/json
+
+###
+POST http://localhost:8080/typealiment
+content-type: application/json
+
+{
+    "nom": "Test 3 Type Aliment"
+}
+
+###
+PUT http://localhost:8080/typealiment
+content-type: application/json
+
+{
+    "id": 6,
+    "nom": "NouveauTest Type Aliment"
+}
+
+###
+DELETE http://localhost:8080/typealiment
+content-type: application/json
+
+{
+    "id": 6
+}
+
+###
+GET http://localhost:8080/typealiment?id=3
+
+###
+GET http://localhost:8080/typealiment?name=fruit

@@ -1,0 +1,36 @@
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                             https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+         
+    <servlet>
+        <servlet-name>couleurServlet</servlet-name>
+        <servlet-class>CouleurServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>couleurServlet</servlet-name>
+        <url-pattern>/couleur</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AlimentServlet</servlet-name>
+        <servlet-class>AlimentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AlimentServlet</servlet-name>
+        <url-pattern>/aliment</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>DataAccessServlet</servlet-name>
+        <servlet-class>com.example.DataAccessServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DataAccessServlet</servlet-name>
+        <url-pattern>/dataaccess</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>

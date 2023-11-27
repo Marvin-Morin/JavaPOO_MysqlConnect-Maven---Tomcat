@@ -1,0 +1,18 @@
+<!-- 
+  Configuration XML pour un hôte (Host) dans Tomcat.
+
+  - 'name="localhost"': spécifie le nom de l'hôte. Dans ce cas, c'est "localhost".
+  - 'appBase="webapps"': spécifie le répertoire où les applications web (WAR files) seront déployées.
+  - 'unpackWARs="true"': indique à Tomcat de décompresser les fichiers WAR lors du déploiement.
+  - 'autoDeploy="true"': active le déploiement automatique, ce qui signifie que Tomcat recherchera automatiquement les changements dans les applications et les redéploiera si nécessaire.
+-->
+<Host name="localhost" appBase="webapps" unpackWARs="true" autoDeploy="true">
+
+  <!-- 
+    Contexte (Context) pour une application web spécifique.
+
+    - 'path="/dataAccess"': spécifie le chemin du contexte de l'application web. Dans ce cas, l'application sera accessible à partir de "http://localhost:8080/dataAccess/".
+    - 'docBase="Main.war"': spécifie le fichier WAR de l'application web. Dans ce cas, le fichier WAR est nommé "Main.war" et doit être présent dans le répertoire "webapps".
+  -->
+  <Context path="/dataAccess" docBase="Main.war"/>
+</Host>
